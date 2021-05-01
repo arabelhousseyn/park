@@ -1,0 +1,92 @@
+
+
+.login{
+    width: auto;
+    margin: 15% 20% 0% 20%;
+}
+.default{
+    width: auto;
+    margin: 15% 20% 0% 20%;
+}
+
+.default1{
+    width: auto;
+    margin: 15% 5% 0% 5%;
+}
+
+.self{
+    text-align: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.pad{
+    padding: 68px;
+}
+.scale:hover{
+    transform: scale(1.02);
+    transition: 1s ease-in-out;
+}
+
+.seperator{
+    margin-bottom: 20px;
+}
+
+.weight{
+    font-weight: bold;
+}
+
+.center{
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
+.centered {
+    text-align: center;
+    align-content: center;
+}
+
+.ticket {
+    width: 155px;
+}
+
+img {
+    max-width: inherit;
+    width: inherit;
+}
+
+@media print {
+    .hidden-print,
+    .hidden-print * {
+        display: none !important;
+    }
+}
+
+.size{
+   font-size: 20px;
+}
+
+.ma{
+    margin: 10% 0 0 0;
+}
+
