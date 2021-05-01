@@ -16,7 +16,7 @@
             <p class="center"><span class='weight'>AUTOBOX SIDI YAHIA</span>
                 <br><span class='center'>PARKING, LAVAGE, ACCESSOIRES</span>
                 <br><span class='center'>SOYEZ LES BIENVENUS</span> </p>
-                 <span><barcode id='sps' :value="detail.qr_moto"></barcode></span>
+                 <span><barcode id='sps' :value="dis.qr_moto"></barcode></span>
                 <span class='size'> <span>BON N : </span> {{dis.code}}</span>
                 <p class='size'> <span>PRIX : </span> {{dis.price}}.00 DA</p>
                 <p > <span class='weight'>DATE ENTRÉE / SORTIE : </span> {{dis.date_enter}} / {{ dis.date_out }} </p>
@@ -25,7 +25,7 @@
                 <span>Ticket perdu 1000 DA</span>
 
         </div>
-        <button class='btn btn-primary form-control' @click="chs" v-print="'#ticket'" ><ic icon="print" /></button>
+        <button class='btn btn-primary form-control' v-print="'#ticket'" ><ic icon="print" /></button>
                 </div>
             </div>
         </div>
@@ -59,19 +59,13 @@ export default {
         this.data.qr = decode
         var run = axios.post(this.link() + 'ms',this.data)
         run.then(e=>{
-            if(e.data.length > 0)
-            {
-               if(e.data == "no")
-                {
-                    this.statu('Ticket dèja générer','error')
-                }else if(e.data == "nodata")
+              if(e.data == "nodata")
                 {
                    this.statu('Ticket incorrect','error') 
                 }else{
                     this.disp = e.data
                 this.view = true
                 }
-            }
         })
         run.catch(e=>{
             console.log('err')

@@ -1,6 +1,6 @@
 <template>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Ajouter un accessoire</h5>
@@ -21,10 +21,9 @@
             <label for="qt" class='weight'>Quantitè</label>
             <input type="number" @keypress="checker" v-model="data.qt" id="qt" class='form-control' placeholder="Quantitè">
         </div>
-        <div v-if="data.qr != null" style='text-align:center;' class="form-group">
-           <span><barcode id='sps' :value="data.qr"></barcode></span>
+        <div v-if="data.qr != null" id='image' style='text-align:center;' class="form-group">
+           <span><barcode id='sps' style='margin-right: 565px;' :value="data.qr"></barcode></span>
            <br>
-           <div id="image"></div>
            <br>
             <button v-print="'#image'" class='btn btn-secondary'><ic icon="print" /></button>
         </div>
