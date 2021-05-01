@@ -7,7 +7,7 @@ Vue.use(VueToast);
 export default{
     data : ()=>{
         return{
-             path : 'http://localhost/ker/learn%20php/park/api/',
+             path : 'https://it-smv.com/park/park/api/',
              allow : 'https://cors-anywhere.herokuapp.com/'
         }
     },
